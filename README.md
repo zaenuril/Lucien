@@ -1,24 +1,25 @@
 # Lucien Neovim Config
 
-Konfigurasi Neovim pribadi berbasis Lua dan `lazy.nvim`, dengan plugin untuk
-editing, LSP, navigasi file, Git, dan tampilan indentasi.
+A personal Neovim configuration written in Lua and managed with `lazy.nvim`.
+It includes plugins for coding, language support, file search, Git, and
+indent guides.
 
-## Fitur
+## Features
 
-- LSP untuk Lua, TypeScript/JavaScript, Python, Rust, Bash, C, dan C++ melalui
-  `nvim-lspconfig` dan Mason.
-- Autocomplete dengan `nvim-cmp` dan LuaSnip.
-- Syntax highlighting dengan Treesitter.
-- Pencarian file dan teks dengan Telescope.
-- Integrasi Git dengan Gitsigns dan Fugitive.
-- Indent guide warna-warni dengan `indent-blankline.nvim`.
-- Tema Eldritch, statusline, dashboard, terminal, dan Neo-tree.
-- Integrasi opsional WakaTime dan Discord Rich Presence.
+- Language support for Lua, TypeScript/JavaScript, Python, Rust, Bash, C, and
+  C++ with `nvim-lspconfig` and Mason.
+- Code completion with `nvim-cmp` and LuaSnip.
+- Syntax highlighting with Treesitter.
+- File and text search with Telescope.
+- Git tools with Gitsigns and Fugitive.
+- Rainbow indent guides with `indent-blankline.nvim`.
+- Eldritch theme, statusline, dashboard, terminal, and Neo-tree.
+- Optional WakaTime and Discord Rich Presence integrations.
 
-## Instalasi
+## Installation
 
-Pastikan Neovim dan Git sudah terpasang. Backup atau pindahkan konfigurasi
-Neovim yang sudah ada terlebih dahulu, lalu clone repo ini ke direktori config.
+Make sure Neovim and Git are installed. Back up or move your current Neovim
+configuration first. Then clone this repository into your Neovim config folder.
 
 ### Linux / WSL
 
@@ -36,24 +37,23 @@ git clone https://github.com/zaenuril/Lucien.git "$env:LOCALAPPDATA\nvim"
 nvim
 ```
 
-Saat pertama kali dibuka, Lazy akan mengunduh plugin. Jalankan `:Lazy sync`
-jika plugin belum terpasang. LSP server yang dikonfigurasi dapat dipasang
-melalui `:Mason`.
+Lazy will download the plugins the first time you open Neovim. If some plugins
+are missing, run `:Lazy sync`. You can install the configured language servers
+with `:Mason`.
 
-## Privasi
+## Privacy
 
-Repo ini tidak menyimpan API key atau token. WakaTime membutuhkan akun/CLI
-WakaTime dan dapat mencatat aktivitas coding. Discord Rich Presence dapat
-menampilkan status aktivitas Neovim ke Discord. Nonaktifkan plugin terkait
-di `lua/plugins/wakatime.lua` atau `lua/plugins/discord.lua` jika tidak ingin
-menggunakan integrasi tersebut.
+This repository does not include API keys or access tokens. WakaTime needs an
+account and its CLI, and it can track coding activity. Discord Rich Presence can
+show your Neovim activity on Discord. To disable either integration, remove or
+disable its plugin in `lua/plugins/wakatime.lua` or `lua/plugins/discord.lua`.
 
-## Kustomisasi
+## Customization
 
-- Plugin: `lua/plugins/`
-- Keymap: `lua/mappings.lua`
-- Opsi Neovim: `lua/options.lua`
-- LSP: `lua/configs/lspconfig.lua`
-- Tema NvChad: `lua/chadrc.lua`
+- Plugins: `lua/plugins/`
+- Keymaps: `lua/mappings.lua`
+- Neovim options: `lua/options.lua`
+- Language servers: `lua/configs/lspconfig.lua`
+- NvChad theme settings: `lua/chadrc.lua`
 
-Lisensi: Unlicense. Lihat [LICENSE](./LICENSE).
+License: Unlicense. See [LICENSE](./LICENSE).
