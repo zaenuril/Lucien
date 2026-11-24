@@ -1,0 +1,13 @@
+# Local secrets and environment-specific settings
+.env
+.env.*
+*.local.lua
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# WakaTime credentials should stay outside this repository
+.wakatime.cfg
+wakatime.cfg
